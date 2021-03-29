@@ -14,19 +14,25 @@ We will use a terraform file called `main.tf`. The command sequence from the Win
 makes use of VSCode running in that environment. This is distinct from VSCode running on Windows. 
 
 
-* Run some preparatory commands on a PC from WSL: `terraform -install-autocomplete` (why this?) 
-* Use the subscription ID (see subscription details in the portal)... in what way? 
+* Start a WSL shell...
+* Run some preparatory commands: azure login, stipulate which subscription to use
 * Create a directory: `mkdir terraform-azure`
 * In this directory create a terraform file called `main.tf`: See below for the template
-* Run the terraform command sequence:
+* Run the command sequence:
 
 ```
+az login
+az account set --subscription="aaaaaa-aaaa-aaaa-aaaaaaaaaaaa"
+terraform -install-autocomplete
 terraform init
 terraform plan
 terraform apply
 ```
 
-Here is `main.tf` with two imaginary students listed:
+This can take some time depending on the provisioning load and number of students. 
+
+
+Here is `main.tf` with just two imaginary students listed:
 
 
 ```
