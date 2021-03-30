@@ -9,23 +9,21 @@ by all students at a glance, ideally sent daily to instructors to avoid accident
 
 ### Azure
 
-This section is about granting measured access to a number of students. The subsequent project work often uses the 
-Visual Studio Code (VSCode) integrated development environment. There are actually two versions of this on a PC: One
-that runs under Windows and one that runs under the Windows Subsystem for Linux (WSL). VSCode running under Windows 
-is the most direct path to the project work on a PC; but the install is a bit involved. It is simpler on a Mac or Linux machine.
-
-That said: For the Azure preparation steps described here we use Terraform. 
+This section is about granting measured access to a number of students. 
+For the Azure preparation steps described here we use Terraform. 
 The necessary commands are issued on a PC from the Windows Subsystem for Linux (WSL) shell.
 
 
 * Start a WSL shell...
 * Create a directory: `mkdir terraform-azure`
-* Install `main.tf` and edit it to correspond to the student access list
-* From that directory execute the command sequence below
-* `az login` and `az account set` aligns the terraform process with the correct location on the Azure cloud
-* the `terraform` commands use Terraform syntax to build the Azure Resource Groups for each student
+* Install `main.tf` in this directory (see below for template) and edit it to correspond to the student list
+* From this same directory execute the command sequence below
+    * `az login` and `az account set` aligns the terraform process with the correct location on the Azure cloud
+    * the `terraform` commands use Terraform syntax to build the Azure Resource Groups for each student and pre-populate them
+
 
 Here is the command sequence:
+
 
 ```
 az login
