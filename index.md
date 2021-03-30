@@ -12,6 +12,8 @@ by all students at a glance, ideally sent daily to instructors to avoid accident
 This section is about granting measured access to a number of students. 
 For the Azure preparation steps described here we use Terraform. 
 The necessary commands are issued on a PC from the Windows Subsystem for Linux (WSL) shell.
+WSL is installed as part of the PC installation of Visual Studio Code. 
+On a non-PC I think you'd just use `bash`. 
 
 
 * Start a WSL shell...
